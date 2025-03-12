@@ -6,7 +6,10 @@
 */
 
 function findLargestElement(numbers) {
-    
+    // const sortedArray = numbers.sort((a,b) => a-b);
+    // return sortedArray[numbers.length-1]
+    if(numbers.length === 0) return undefined;
+    return Math.max(...numbers);
 }
 
 module.exports = findLargestElement;
