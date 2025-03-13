@@ -90,7 +90,9 @@ input::placeholder{
     border: 0;
     border-radius: 6px;
 }
-
+.button-section button:hover{
+    cursor: pointer;
+}
 .links {
     display: flex;
     justify-content: center;
