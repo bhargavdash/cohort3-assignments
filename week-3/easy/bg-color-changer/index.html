@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>bg-color-changer</title>
+    <style>
+        .container{
+            margin: 0 auto;
+            height: 500px;
+            width: 500px;
+            border-style:solid;
+            border-color: black;
+        }
+        .buttons{
+            padding-top: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: center;
+        }
+        .buttons button {
+            margin-right: 10px;
+            height: 50px;
+            width: 80px;
+            font-size: 20px;
+            border-radius: 5px;
+        }
+        .buttons button:hover{
+            cursor: pointer;
+        }
+        .addButton{
+            margin-top: 20px;
+            display: flex;
+            justify-content: center;
+        }
+    </style>
+</head>
+<body>
+    <div class="container" id="area"></div>
+    <div id="buttons-id" class="buttons">
+        <button value="Red" style="background-color: red;" onclick="buttonClick(event)">Red</button>
+        <button value="Green" style="background-color: green;" onclick="buttonClick(event)">Green</button>
+        <button value="Yellow" style="background-color: yellow;"onclick="buttonClick(event)">Yellow</button>
+        <button value="Blue" style="background-color: blue;" onclick="buttonClick(event)">Blue</button>
+    </div>
+    <div class="addButton">
+        <input id="new-button" type="text">
+        <button style="margin-left: 10px;" onclick="addButton()">Add Button</button>
+    </div>
+</body>
+
+<script>
+    function buttonClick(event){
+        console.log(event);
+        let color = event.target.value;
+        console.log(color);
+        let container = document.getElementById("area")
+        container.style.backgroundColor = color;
+    }
+    function newButtonClick(color){
+        let container = document.getElementById("area")
+        container.style.backgroundColor = color;
+    }
+    function addButton(){
+        let color = document.getElementById("new-button").value;
+        let newButton = document.createElement("button");
+        newButton.value = color;
+        newButton.style.backgroundColor = color;
+        newButton.innerHTML = color;
+        newButton.onclick = (event) => buttonClick(event);
+        let parent = document.getElementById("buttons-id")
+        parent.appendChild(newButton);
+    }
+</script>
+</html>
