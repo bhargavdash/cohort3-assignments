@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="module" src="script.js"></script>
+    <title>Quiz-App</title>
+    <style>
+        .container{
+            margin: 0 auto;
+            margin-top: 50px;
+            height: 200px;
+            width: 400px;
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content:space-between;
+            border-radius: 5px;
+        }
+        .question{
+            display: flex; 
+            justify-content:center
+        }
+        .options{
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+        }
+        .submit button{
+            width: 100%;
+            height: 30px;
+            border: 1px solid black;
+            border-radius: 2px;
+            background-color: rgb(192, 171, 212);
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div id="container-id" class="container">
+        <div id="question-id" class="question">
+            <h3>Which language runs in a web browser?</h3>
+        </div>
+        <div id="parentDiv" class="options">
+            <div id="option1" class="optionItem">
+                <input id="1" name="quizOption" type="radio">
+                <label for="1">Java</label>
+            </div>
+            <div id="option2" class="optionItem">
+                <input id="2" name="quizOption" type="radio">
+                <label for="2">C</label>
+            </div>
+            <div id="option3" class="optionItem">
+                <input id="3" name="quizOption" type="radio">
+                <label for="3">Python</label>
+            </div>
+            <div id="option4" class="optionItem">
+                <input id="4" name="quizOption" type="radio">
+                <label for="4">Javascript</label>
+            </div>
+        </div>
+        <div class="submit">
+            <button id="submit-btn">Submit</button>
+        </div>
+    </div>
+</body>
+
+</html>
