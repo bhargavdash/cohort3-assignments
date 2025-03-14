@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <script src="script.js" defer></script>
+    <title>Category-Todo</title>
+</head>
+<body>
+    <div class="container">
+        <div class="column">
+            <div class="header">
+                <h4>To Do</h4>
+                <img src="./assets/menu-sign.jpg" style="width: 20px; height:20px">
+            </div>
+            <div id="box1" class="todos-container">
+                <div class="todo" draggable="true">
+                    <div class="top">
+                        <h6 style="font-size: 15px; margin-top:1px; margin-bottom:0px; padding-left:5px;">TO-DO</h6>
+                        <p style="font-size: 10px; margin-top:1px; padding-left:5px;">Todo Description</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="level-and-time">
+                            <div class="level"><p>Medium</p></div>
+                            <div class="time">
+                                <img src="./assets/clock-image.png" style="width: 10px; height:10px; margin-right:2px">
+                                <p style="font-size: 10px;">July 31, 2024</p>
+                            </div>
+                        </div>
+                        <div class="lastSeen">
+                            <p style="font-size: 10px;">1 hr ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="todo" draggable="true">
+                    <div class="top">
+                        <h6 style="font-size: 15px; margin-top:1px; margin-bottom:0px; padding-left:5px;">TO-DO</h6>
+                        <p style="font-size: 10px; margin-top:1px; padding-left:5px;">Todo Description</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="level-and-time">
+                            <div class="level"><p>Medium</p></div>
+                            <div class="time">
+                                <img src="./assets/clock-image.png" style="width: 10px; height:10px; margin-right:2px">
+                                <p style="font-size: 10px;">July 31, 2024</p>
+                            </div>
+                        </div>
+                        <div class="lastSeen">
+                            <p style="font-size: 10px;">1 hr ago</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="todo" draggable="true">
+                    <div class="top">
+                        <h6 style="font-size: 15px; margin-top:1px; margin-bottom:0px; padding-left:5px;">TO-DO</h6>
+                        <p style="font-size: 10px; margin-top:1px; padding-left:5px;">Todo Description</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="level-and-time">
+                            <div class="level"><p>Medium</p></div>
+                            <div class="time">
+                                <img src="./assets/clock-image.png" style="width: 10px; height:10px; margin-right:2px">
+                                <p style="font-size: 10px;">July 31, 2024</p>
+                            </div>
+                        </div>
+                        <div class="lastSeen">
+                            <p style="font-size: 10px;">1 hr ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="add-item" onclick="addTodo('box1')">
+                <div class="left"><p>Add Item</p></div>
+                <div class="right"><p>+</p></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="header">
+                <h4>In Progress</h4>
+                <img src="./assets/menu-sign.jpg" style="width: 20px;">
+            </div>
+            <div id="box2" class="todos-container">
+                <div class="todo" draggable="true">
+                    <div class="top">
+                        <h6 style="font-size: 15px; margin-top:1px; margin-bottom:0px; padding-left:5px;">TO-DO</h6>
+                        <p style="font-size: 10px; margin-top:1px; padding-left:5px;">Todo Description</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="level-and-time">
+                            <div class="level"><p>Medium</p></div>
+                            <div class="time">
+                                <img src="./assets/clock-image.png" style="width: 10px; height:10px; margin-right:2px">
+                                <p style="font-size: 10px;">July 31, 2024</p>
+                            </div>
+                        </div>
+                        <div class="lastSeen">
+                            <p style="font-size: 10px;">1 hr ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-item">
+                <div class="left"><p>Add Item</p></div>
+                <div class="right"><p>+</p></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="header">
+                <h4>Under Review</h4>
+                <img src="./assets/menu-sign.jpg" style="width: 20px;">
+            </div>
+            <div id="box3" class="todos-container">
+                <div class="todo" draggable="true">
+                    <div class="top">
+                        <h6 style="font-size: 15px; margin-top:1px; margin-bottom:0px; padding-left:5px;">TO-DO</h6>
+                        <p style="font-size: 10px; margin-top:1px; padding-left:5px;">Todo Description</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="level-and-time">
+                            <div class="level"><p>Medium</p></div>
+                            <div class="time">
+                                <img src="./assets/clock-image.png" style="width: 10px; height:10px; margin-right:2px">
+                                <p style="font-size: 10px;">July 31, 2024</p>
+                            </div>
+                        </div>
+                        <div class="lastSeen">
+                            <p style="font-size: 10px;">1 hr ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-item">
+                <div class="left"><p>Add Item</p></div>
+                <div class="right"><p>+</p></div>
+            </div>
+        </div>
+        <div class="column">
+            <div class="header">
+                <h4>Finished</h4>
+                <img src="./assets/menu-sign.jpg" style="width: 20px;">
+            </div>
+            <div id="box4" class="todos-container">
+                <div class="todo" draggable="true">
+                    <div class="top">
+                        <h6 style="font-size: 15px; margin-top:1px; margin-bottom:0px; padding-left:5px;">TO-DO</h6>
+                        <p style="font-size: 10px; margin-top:1px; padding-left:5px;">Todo Description</p>
+                    </div>
+                    <div class="bottom">
+                        <div class="level-and-time">
+                            <div class="level"><p>Medium</p></div>
+                            <div class="time">
+                                <img src="./assets/clock-image.png" style="width: 10px; height:10px; margin-right:2px">
+                                <p style="font-size: 10px;">July 31, 2024</p>
+                            </div>
+                        </div>
+                        <div class="lastSeen">
+                            <p style="font-size: 10px;">1 hr ago</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="add-item">
+                <div class="left"><p>Add Item</p></div>
+                <div class="right"><p>+</p></div>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
