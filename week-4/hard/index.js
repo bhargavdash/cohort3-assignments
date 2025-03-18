@@ -2,7 +2,7 @@ const express = require("express");
 const dotenv = require("dotenv");
 const mongoose = require('mongoose');
 
-mongoose.connect('mongodb+srv://bhargavdash:aI7fZBQ73k8Mdcul@cluster0.orzmy.mongodb.net/new-todo-app').then(() =>{
+mongoose.connect(process.env.MONGO_URI).then(() =>{
     console.log("DB connected!!");
 })
 

@@ -4,7 +4,7 @@ const router = Router();
 const bcrypt = require('bcrypt');
 const dotenv = require('dotenv');
 const jwt = require('jsonwebtoken');
-const JWT_SECRET = 'myjwtsecret';
+const JWT_SECRET = process.env.JWT_SECRET;
 
 const userMiddleware = require("../middleware/user");
 
