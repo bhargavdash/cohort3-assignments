@@ -1,1 +1,55 @@
   /* start from here */
+  body{
+    background-color: rgb(216, 198, 234);
+    font-family:sans-serif;
+  }
+  .container{
+    background-color: rgb(88, 68, 107);
+    height: 400px;
+    width: 500px;
+    border: 1px solid black;
+    border-radius: 10px;
+    margin: 0 auto;
+    margin-top: 40px;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .container a{
+    color: yellow;
+  }
+
+  .signup, .signin{
+    border-radius: 5px;
+    width:80%;
+    height:80%;
+  }
+
+  .header h3{
+    font-size: 40px;
+    margin: 0 auto;
+  }
+  .username, .password {
+    margin-top: 20px;
+    margin-bottom: 15px;
+  }
+  .username p, .password p{
+    font-size: 20px;
+    margin: 5px;
+  }
+  .user-input, .submit-btn{
+    width: 97%;
+    height: 30px;
+    border-radius: 8px;
+    border: 0;
+    background-color: rgb(158, 112, 201);
+    padding-left: 10px;
+    color: white;
+  }
+  .submit-btn{
+    width: 100%;
+    margin-top: 30px;
+    margin-bottom: 5px;
+    font-size: 18px;
+  }
