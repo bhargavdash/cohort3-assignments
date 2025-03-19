@@ -18,6 +18,9 @@
   }
   .container a{
     color: yellow;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
   }
 
   .signup, .signin{
@@ -52,4 +55,8 @@
     margin-top: 30px;
     margin-bottom: 5px;
     font-size: 18px;
+  }
+  .submit-btn:hover{
+    cursor: pointer;
+    background-color: rgb(165, 86, 240);
   }

@@ -5,10 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Taskify Frontend</title>
     <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
 </head>
 <body>
     <!-- start writing code -->
-     <div class="container">
+     <div id="container" class="container">
         <div id="signupId" class="signup">
             <div class="header">
                 <h3>Signup</h3>
@@ -16,15 +17,15 @@
             <div class="inputs">
                 <div class="username">
                     <p>Username:</p>
-                    <input class="user-input" type="text">
+                    <input id="signup-username" class="user-input" type="text">
                 </div>
             
                 <div class="password">
                     <p>Password:</p>
-                    <input class="user-input" type="text">
+                    <input id="signup-password" class="user-input" type="text">
                 </div>
             </div>
-            <button class="submit-btn">Signup</button>
+            <button class="submit-btn" onclick="handleSignUp()">Signup</button>
             <div class="text">
                 <p>Already have an account? <a href="#" id="show-sign-in">Sign In</a></p>
             </div>
@@ -36,20 +37,37 @@
             <div class="inputs">
                 <div class="username">
                     <p>Username:</p>
-                    <input class="user-input" type="text">
+                    <input id="signin-username" class="user-input" type="text">
                 </div>
             
                 <div class="password">
                     <p>Password:</p>
-                    <input class="user-input" type="text">
+                    <input id="signin-password" class="user-input" type="text">
                 </div>
             </div>
-            <button class="submit-btn">Signin</button>
+            <button class="submit-btn" onclick="handleSignIn()">Signin</button>
             <div class="text">
                 <p>Don't have an account? <a href="#" id="show-sign-up">Sign Up</a></p>
             </div>
         </div>
-        <!-- <div id="todoInterfaceId" class="todoInterface">Add todo here</div> -->
+        <div id="todoInterfaceId" style="display: none;" class="todoInterface">
+            <div class="header">
+                <h3>Add new todo</h3>
+            </div>
+            <div class="inputs">
+                <div class="title">
+                    <p>Title:</p>
+                    <input id="todo-title" type="text" class="user-input">
+                </div>
+            </div>
+            <button class="submit-btn" onclick="addTodo()">Add</button>
+            <div class="displayTodos">
+                <ul id="addTodoField">
+                    
+                </ul>
+            </div>
+            <button id="logout-btn" class="submit-btn" onclick="logout()">Logout</button>
+        </div>
      </div>
     <script src="./script.js"></script>    
 </body>

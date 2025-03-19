@@ -3,6 +3,7 @@
 const express = require('express');
 const mongoose = require('mongoose');
 const dotenv = require('dotenv')
+const cors = require('cors');
 dotenv.config();
 
 const userRoutes = require('./routes/user');
@@ -19,6 +20,8 @@ const app = express();
 
 // to parse json 
 app.use(express.json());
+// to handle cors
+app.use(cors());
 
 app.get('/healthy', (req, res)=>{
     res.send("I am healthy");
