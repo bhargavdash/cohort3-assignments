@@ -5,7 +5,7 @@ const dotenv = require('dotenv')
 dotenv.config();
 const JWT_SECRET = process.env.JWT_SECRET;
 
-function auth(req, res, next){
+function authMiddleware(req, res, next){
     const token = req.headers.token;
     if(!token){
         return res.status(400).json({error: "Token not available"});
@@ -18,4 +18,4 @@ function auth(req, res, next){
     next();
 }
 
-module.exports = auth;
+module.exports = authMiddleware;

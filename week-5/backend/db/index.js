@@ -19,6 +19,7 @@ const todoSchema = new Schema({
     userId: ObjectId
 })
 
+
 const User = mongoose.model('users', userSchema);
 const Todo = mongoose.model('todos', todoSchema);
 
