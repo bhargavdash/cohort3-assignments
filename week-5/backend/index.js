@@ -5,6 +5,9 @@ const mongoose = require('mongoose');
 const dotenv = require('dotenv')
 dotenv.config();
 
+const userRoutes = require('./routes/user');
+const todoRoutes = require('./routes/todo');
+
 const MONGO_URI = process.env.MONGO_URI
 const PORT = process.env.PORT;
 // connect to db
