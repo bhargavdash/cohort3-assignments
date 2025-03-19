@@ -2,9 +2,13 @@
 
 const express = require('express');
 const mongoose = require('mongoose');
+const dotenv = require('dotenv')
+dotenv.config();
 
+const MONGO_URI = process.env.MONGO_URI
+const PORT = process.env.PORT;
 // connect to db
-mongoose.connect('mongodb+srv://bhargavdash:aI7fZBQ73k8Mdcul@cluster0.orzmy.mongodb.net/todo-app').then(()=>{
+mongoose.connect(MONGO_URI).then(()=>{
     console.log("DB connected!!");
 })
 
@@ -17,4 +21,7 @@ app.get('/healthy', (req, res)=>{
     res.send("I am healthy");
 })
 
-app.listen(3000, ()=> console.log("Server running on port 3000"));
+app.use('/users', userRoutes);
+app.use('/todos', todoRoutes);
+
+app.listen(PORT, ()=> console.log(`Server running on port ${PORT}`));
