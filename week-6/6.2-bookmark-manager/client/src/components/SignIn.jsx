@@ -1,21 +1,34 @@
 import { useRef } from "react";
 import { useNavigate } from "react-router-dom";
+import axios from "axios";
 function SignIn(){
     const userRef = useRef();
     const passRef = useRef();
+    const navigate = useNavigate();
 
-    function handleSignIn(){
+    async function handleSignIn(){
         const username = userRef.current.value;
-        const password = userRef.current.value;
+        const password = passRef.current.value;
+       
 
         console.log(username);
         console.log(password);
 
-        // do backend api call and get response 
+        const response = await axios.post('http://localhost:3000/user/signin', {
+            username: username,
+            password: password
+        })
+
+        if(response.data.token){
+            console.log(response.data.token);
+            localStorage.setItem("token", response.data.token);
+            navigate('/bookmarks');
+        }
+        else{
+            console.log(response);
+        }
         
     }
-
-    const navigate = useNavigate();
 
     return <div>
         <div>
@@ -35,5 +48,6 @@ function SignIn(){
         </div>
     </div>
 }
+
 
 export default SignIn;

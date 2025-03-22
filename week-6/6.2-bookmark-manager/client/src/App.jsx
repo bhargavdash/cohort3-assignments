@@ -1,13 +1,22 @@
-import { BrowserRouter, Routes, Route, Link } from 'react-router-dom';
+import { BrowserRouter, Routes, Route, Link, Links } from 'react-router-dom';
 import SignUp from './components/SignUp';
 import SignIn from './components/SignIn';
 import Bookmark from './components/Bookmark';
 import ErrorPage from './components/ErrorPage';
+import Header from './components/Header';
+import Footer from './components/Footer';
+import { useState } from 'react';
+
+
 function App() {
-  return <div>
-    <header>
-      This is the header component
-    </header>
+  const [lightMode, setLightMode] = useState(false);
+  const styles = {
+    background: lightMode ? "white" : "black",
+    color: lightMode ? "black" : "white"
+  }
+  
+  return <div style={styles}>
+    <Header setLightMode={setLightMode} />
     <BrowserRouter>
     <Routes>
       <Route path='/' element={<SignUp />} />
@@ -17,10 +26,9 @@ function App() {
       <Route path='*' element={<ErrorPage />} />
     </Routes>
     </BrowserRouter>
-    <footer>
-      This is the footer component
-    </footer>
+    <Footer />
   </div>
 }
+
 
 export default App;

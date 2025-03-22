@@ -21,6 +21,7 @@ function SignUp(){
         navigate('/signin');
     }
 
+    
     return <div>
         <div>
             <h3>Signup</h3>
