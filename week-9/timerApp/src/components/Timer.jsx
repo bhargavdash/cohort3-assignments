@@ -1,9 +1,9 @@
-import React from 'react'
+import style from './NewTimer.module.css'
 
-const Timer = () => {
-  return (
-    <div>Timer</div>
-  )
+function Timer(){
+    return <div>
+        Hello world
+    </div>
 }
 
-export default Timer
+export default Timer;

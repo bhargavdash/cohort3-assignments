@@ -38,6 +38,7 @@ body {
     position: relative;
   }
   
+  
   .timerCircle::before {
     content: '';
     position: absolute;

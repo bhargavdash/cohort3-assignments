@@ -1,7 +1,8 @@
 import Header from './components/Header';
 import PetAdoptionForm from './components/PetAdoptionForm';
 import "./myApp.css";
-
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import AdopterData from './components/AdopterData'
 
 const App = () => {
   return (
@@ -12,9 +13,15 @@ const App = () => {
         backgroundSize: "cover"
       }}
     >
-      <Header message={"Pet Adoption Form"} />
-      <PetAdoptionForm />
+      <BrowserRouter>
+      <Header />
+      <Routes>
+        <Route path='/' element={<PetAdoptionForm />} />
+        <Route path='/adopter-data' element={<AdopterData />} />
+      </Routes>
+      </BrowserRouter>
     </div>
   );
 };
+
 export default App;
