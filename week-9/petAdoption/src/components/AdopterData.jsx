@@ -1,18 +1,8 @@
-import { useNavigate, useLocation } from 'react-router-dom';
 import { useState, useEffect } from 'react';
-function AdopterData(){
-  const [formData, setFormData] = useState([]);
-
-  const navigate = useNavigate();
-  const location = useLocation();
-  const data= location.state;
-
-  useEffect(()=>{
-    setFormData([...formData, data])
-  }, [])
+function AdopterData(props){
 
   function goToHome(){
-    navigate('/');
+    props.setShowTable(value => !value);
   }
 
   return <div>
@@ -28,7 +18,7 @@ function AdopterData(){
         </tr>
         </thead>
         <tbody>
-        {formData.map((rowData, index) => (
+        {props.formData.map((rowData, index) => (
           <tr key={index}>
           <td>{rowData.petName}</td>
           <td>{rowData.petType}</td>

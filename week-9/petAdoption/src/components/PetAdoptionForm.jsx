@@ -1,8 +1,7 @@
-import { useNavigate } from 'react-router-dom';
 import { useRef } from 'react';
 
 
-const PetAdoptionForm = () => {
+const PetAdoptionForm = (props) => {
   const petNameRef = useRef();
   const petTypeRef = useRef();
   const breedRef = useRef();
@@ -10,10 +9,9 @@ const PetAdoptionForm = () => {
   const emailRef = useRef();
   const phoneRef = useRef();
 
-  const navigate = useNavigate();
   function handleSubmit(){
 
-    const formData = {
+    const currentForm = {
       petName: petNameRef.current.value,
       petType: petTypeRef.current.value,
       breed: breedRef.current.value,
@@ -21,8 +19,8 @@ const PetAdoptionForm = () => {
       email: emailRef.current.value,
       phone: phoneRef.current.value,
     }
-
-    navigate('/adopter-data', {state: formData})
+    props.setFormData([...props.formData, currentForm]);
+    props.setShowTable(value => !value);
   }
 
   const styles = {

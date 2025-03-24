@@ -1,10 +1,12 @@
 import Header from './components/Header';
 import PetAdoptionForm from './components/PetAdoptionForm';
 import "./myApp.css";
-import {BrowserRouter, Routes, Route} from 'react-router-dom';
 import AdopterData from './components/AdopterData'
+import { useState } from 'react';
 
 const App = () => {
+  const [showTable, setShowTable] = useState(false);
+  const [formData, setFormData] = useState([]);
   return (
     <div
       style={{
@@ -13,15 +15,18 @@ const App = () => {
         backgroundSize: "cover"
       }}
     >
-      <BrowserRouter>
       <Header />
-      <Routes>
-        <Route path='/' element={<PetAdoptionForm />} />
-        <Route path='/adopter-data' element={<AdopterData />} />
-      </Routes>
-      </BrowserRouter>
+      {!showTable && <PetAdoptionForm 
+      setShowTable={setShowTable} 
+      formData={formData} 
+      setFormData={setFormData} />}
+      {showTable && <AdopterData 
+      setShowTable={setShowTable} 
+      formData={formData} 
+      setFormData={setFormData} />}
     </div>
   );
+
 };
 
 export default App;
