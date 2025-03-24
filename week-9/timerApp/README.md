@@ -16,9 +16,10 @@ Build a simple timer app with start, pause, reset, and editable time functionali
 ### 2. **Countdown Logic**
    - Implement a `useEffect` that updates the `time` every second when the timer is active.
 
+
 ### 3. **Editable Time**
    - Allow users to click on hours, minutes, or seconds to edit that specific part of the time.
-
+   
 ### 4. **Input Handling**
    - Ensure inputs are limited to two digits (hours, minutes, seconds).
 
