@@ -10,7 +10,7 @@ export const BlackComponent = () => {
         <h1 className="text-6xl">It's easy to start selling</h1>
     </div>
     <div className="mt-28 mb-32 flex justify-center gap-2">
-        {windowSize.width > 768 && <div className="flex"> 
+        {windowSize.width > 768 && <div className="flex gap-2"> 
             <div>
                 <img className="-translate-y-20" src={blackComponentImage1} alt="black-component-image-1" />
             </div>
